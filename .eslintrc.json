@@ -18,6 +18,7 @@
       "eslint-plugin-import-helpers"
     ],
     "rules": {
+      "max-classes-per-file": ["error", 3],
       "camelcase": "off",
       "import/no-unresolved": "error",
       "class-methods-use-this": "off",
