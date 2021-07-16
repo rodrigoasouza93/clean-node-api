@@ -33,7 +33,8 @@
         "error",
         "ignorePackages",
         {
-          "ts": "never"
+          "ts": "never",
+          "js": "never"
         }
       ],
       "import-helpers/order-imports": [
@@ -65,7 +66,8 @@
       ],
       "@typescript-eslint/no-unused-vars": ["error", {
         "argsIgnorePattern": "_"
-      }]
+      }],
+      "@typescript-eslint/no-var-requires": "off"
     },
     "settings": {
       "import/resolver": {
