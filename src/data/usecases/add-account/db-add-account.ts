@@ -1,6 +1,5 @@
-import { AddAccountRepository } from '../../protocols/add-account-repository';
 import {
-  AddAccount, AddAccountModel, AccountModel, Encrypter,
+  AddAccount, AddAccountModel, AccountModel, Encrypter, AddAccountRepository,
 } from './db-add-account-protocols';
 
 export class DbAddAccount implements AddAccount {
