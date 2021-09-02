@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+
+  db:
+    image: mongo
+    container_name: db
+    restart: always
+    tty: true
+    networks:
+      - app-database
+
+  app:
+    build:
+      context: ./
+    container_name: app
+    image: rodrigoasouza93/clean-node-api
+    entrypoint: ./.docker/entrypoint.sh
+    environment:
+      - WAIT_HOSTS=db:27017
+    networks:
+      - app-database
+    volumes:
+      - ./:/usr/src/app
+    tty: true
+    ports:
+      - "5050:5050"
+    depends_on:
+       - db
+
+networks:
+  app-database:
+    driver: bridge
