@@ -29,6 +29,7 @@
       "no-empty-function": "off",
       "lines-between-class-members": "off",
       "no-restricted-syntax": ["error", "ForOffStatement", "LabeledStatement", "WithStatement"],
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
       "no-underscore-dangle": "off",
       "import/extensions": [
         "error",
@@ -55,14 +56,6 @@
             "order": "asc",
             "ignoreCase": true
           }
-        }
-      ],
-      "import/no-extraneous-dependencies": [
-        "error",
-        {
-          "devDependencies": [
-            "**/*.spec.js"
-          ]
         }
       ],
       "@typescript-eslint/no-unused-vars": ["error", {
