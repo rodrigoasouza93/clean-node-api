@@ -29,6 +29,7 @@
       "no-empty-function": "off",
       "lines-between-class-members": "off",
       "no-restricted-syntax": ["error", "ForOffStatement", "LabeledStatement", "WithStatement"],
+      "no-underscore-dangle": "off",
       "import/extensions": [
         "error",
         "ignorePackages",
