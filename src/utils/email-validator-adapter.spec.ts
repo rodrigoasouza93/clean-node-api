@@ -28,4 +28,12 @@ describe('EmailValidator Adapter', () => {
     sut.isValid('any_email@mail.com')
     expect(isEmailSpy).toHaveBeenCalledWith('any_email@mail.com')
   })
+
+  test('should throws if validator throws', () => {
+    jest.spyOn(validator, 'isEmail').mockImplementationOnce(() => {
+      throw new Error()
+    })
+    const sut = new EmailValidatorAdapter()
+    expect(() => sut.isValid('any_email@mail.com')).toThrow()
+  })
 })
